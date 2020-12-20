@@ -109,6 +109,7 @@ if( LIBAKRYPT_CRYPTO_FUNCTIONS )
                     source/ak_sign.c
                     source/ak_context_manager.c
                     source/ak_handle.c
+                    source/ak_blowfish.c
   )
 endif()
 
@@ -282,6 +283,7 @@ set( EXAMPLES_LIST hello
                    log
                    oid
                    ini
+            blowfish
 )
 if( LIBAKRYPT_CRYPTO_FUNCTIONS )
   set( EXAMPLES_LIST ${EXAMPLES_LIST}

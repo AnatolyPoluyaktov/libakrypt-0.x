@@ -106,6 +106,10 @@
     блочного шифрования Кузнечик (ГОСТ Р 34.12-2015). */
  int ak_bckey_context_kuznechik_init_tables( const linear_register , const sbox , ak_kuznechik_params );
 /*! \brief Инициализация внутренних переменных значениями, регламентируемыми ГОСТ Р 34.12-2015. */
+ /*! \brief Инициализация внутренних структур данных, используемых при реализации алгоритма
+    блочного шифрования Blowfish. */
+ bool_t ak_bckey_init_blowfish_tables( void );
+ 
  int ak_bckey_context_kuznechik_init_gost_tables( void );
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -115,6 +119,8 @@
  bool_t ak_bckey_test_kuznechik( void );
 /*! \brief Тестирование корректной работы режима блочного шифрования с одновременной
     выработкой имитовставки. */
+     /*! \brief Тестирование корректной работы алгоритма блочного шифрования Blowfish. */
+ bool_t ak_bckey_test_blowfish( void );
  bool_t ak_bckey_test_mgm( void );
 /*! \brief Тестирование корректной работы режима шифрования ACPKM, регламентируемого Р 1323565.1.017—2018. */
  bool_t ak_bckey_test_acpkm( void );
